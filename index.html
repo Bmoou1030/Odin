@@ -4,22 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/responsive-setup.css">
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&display=swap" rel="stylesheet"> 
     <title>Document</title>
 </head>
 <body>
+    <i class="icon-menu burger-button" id="burger-menu"></i>
     <header class="header">
         <section class="content content_header">
         <figure class="cont_logo_header">
             <a href=""><img src="img/logo.png" alt=""></a>
         </figure>
-        <nav class="menu_prin">
+        <nav class="menu_prin menu is-active">
             <ul>
                 <li><a href="">Home</a></li>
-                <li><a href="">Apps</a></li>
-                <li><a href="">Blog</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#offers">Offers</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#start">Start project</a></li>
+
             </ul>
         </nav>
+
     </section>
     </header>
 
@@ -32,7 +38,7 @@
         </section>
     </section>
 
-    <section class="container serv_container">
+    <section class="container serv_container" id="services">
         <article class="services">
             <figure>
                 <a href=""><img src="img/lamp.png" alt=""></a>
@@ -56,7 +62,7 @@
         </article>
     </section>
 
-    <section class="oferta-container">
+    <section class="oferta-container" id="offers">
         <article class="option-links">
             <h2>We offer modern and clean newsletter design</h2>
             <ul>
@@ -85,7 +91,7 @@
         </article>
     </section>
 
-    <section class="container-blog">
+    <section class="container-blog" id="blog">
         <h2>Some nees form our blog</h2>
             <p>Cras ultricies ligula seo.</p>
         <article class="cont-blog">
@@ -115,7 +121,7 @@
         <nav class="btn_mas"><a href=""><img src="img/mas-icon.png" alt=""></a></nav>
     </section>
 
-    <section class="container-project">        
+    <section class="container-project" id="start">        
             <article class="cont-start-project">
                 <h2>Start your web agency for just $19</h2>
                 <p>Cras ultricies ligula sed magna dictum porta.</p>
@@ -155,5 +161,72 @@
             </article>
         </section>
     </footer>
+
+
+     <!--<script>
+      // console.log('Hola mundo! es mi primera linea en JS');
+      const ipad = window.matchMedia('screen and (max-width: 690px)')
+      const menu = document.querySelector('.menu');
+      // console.log(menu);
+      const burgerButton = document.querySelector('#burger-menu');
+      // console.log(burgerButton);
+
+
+      ipad.addListener(validation)
+
+      function validation(event) {
+        if (event.matches) {
+          burgerButton.addEventListener('click', hideShow)
+        } else {
+          burgerButton.removeEventListener('click', hideShow)
+        }
+      }
+      validation(ipad);
+
+
+      function hideShow() {
+        if (menu.classList.contains('is-active')) {
+          menu.classList.remove('is-active');
+        } else {
+          menu.classList.add('is-active');
+        }
+      }
+    </script> -->
+
+
+    <script>
+        //console.log('Hola mundo');     
+        const ipad = window.matchMedia('screen and (max-width: 690px)');
+        const menu = document.querySelector('.menu');
+        //console.log(menu);
+        const burgerButton = document.querySelector('#burger-menu');
+        //console.log(burgerButton);
+        
+        
+        ipad.addListener(validation)
+  
+        function validation(event){
+          if (event.matches){
+            burgerButton.addEventListener('click', hideShow)
+          } else {
+            burgerButton.removeEventListener('click', hideShow)
+          }
+        }
+  
+        validation(ipad);
+  
+        
+        function hideShow(){
+          if (menu.classList.contains('is-active')){
+            menu.classList.remove('is-active'); 
+          }else{
+            menu.classList.add('is-active');
+          }
+        }
+  
+  
+       
+      </script>
+
 </body>
 </html>
